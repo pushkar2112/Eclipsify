@@ -14,3 +14,8 @@ Find the detailed UI [here!](https://www.figma.com/file/mTu99F6os5cN1Pnx7FzEaB/H
   <img alt="eclipsify mockup" src="git-assets/el-2.jpeg" alt="eclipsify.co" width="250">
   <img alt="eclipsify mockup" src="git-assets/el-3.jpeg" alt="eclipsify.co" width="250">
 </div>
+
+## App Walkthrough
+
+Watch the App Walkthrough : [Here](https://drive.google.com/file/d/1O2YaR_Vm6k7m1nq-SIAgH1pCcmcQDAwZ/view?usp=sharing)
+
