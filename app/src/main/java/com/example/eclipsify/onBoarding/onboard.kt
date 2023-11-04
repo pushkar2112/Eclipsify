@@ -29,7 +29,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.navigation.NavHostController
 
-
 @Composable
 fun Boarding(navController: NavHostController){
     Box(modifier =Modifier.fillMaxSize())
@@ -39,20 +38,22 @@ fun Boarding(navController: NavHostController){
             contentScale = ContentScale.Crop )
     }
     Column(Modifier.fillMaxSize(), verticalArrangement = Arrangement.Top, horizontalAlignment = Alignment.CenterHorizontally) {
-        Spacer(modifier = Modifier.height(50.dp))
+        Spacer(modifier = Modifier.height(40.dp))
         Image(painter = painterResource(id = R.drawable.logo2), contentDescription ="", modifier = Modifier.size(280.dp,280.dp) )
 
-Text(text = "Explore The App", Modifier.offset(0.dp,-30.dp),color = Color.White, fontSize = 24.sp, fontFamily = FontFamily(Font(R.font.akirabold)) )
+        Text(text = "Explore the App", Modifier.offset(0.dp,-30.dp),color = Color.White, fontSize = 23.sp, fontFamily = FontFamily(Font(R.font.lesemibold)) )
         Spacer(modifier = Modifier.height(25.dp))
 
-        Text(text = "Your Cosmic Adventure Awaits! Delve into the enchanting world of eclipses with fun and educational content for kids and adults alike. Explore eclipse seasons, learn why eclipses happen, and witness the magic of celestial alignments.", color = Color.White,textAlign = TextAlign.Center, modifier = Modifier.width(332.dp).offset(0.dp,-30.dp), fontSize = 12.sp, fontFamily = FontFamily.SansSerif)
-        Spacer(modifier = Modifier.height(25.dp))
+        Text(text = "Your Cosmic Adventure Awaits! Delve into the enchanting world of eclipses with fun and educational content for kids and adults alike. Explore  the magic of celestial alignments.", color = Color.White,textAlign = TextAlign.Center, modifier = Modifier.width(332.dp).offset(0.dp,-30.dp), fontSize = 12.sp, fontFamily = FontFamily(
+            Font(R.font.popreg)
+        ))
+        Spacer(modifier = Modifier.height(17.dp))
 
         Button(onClick = { navController.navigate("Choice") }, modifier = Modifier
-            .size(175.dp, 44.dp)
+            .size(140.dp, 39.dp)
             , colors = ButtonDefaults.buttonColors(
-            Color.White)) {
-            Text(text = "Let's Begin", fontSize = 20.sp, color = colorResource(id = R.color.orange), fontFamily = FontFamily(Font(R.font.popreg)), fontWeight = FontWeight.SemiBold, modifier = Modifier.offset(0.dp,-2.dp))
+                Color.White)) {
+            Text(text = "Let's Begin", fontSize = 16.sp, color = colorResource(id = R.color.orange), fontFamily = FontFamily(Font(R.font.popreg)), fontWeight = FontWeight.SemiBold, modifier = Modifier.offset(0.dp,-2.dp))
 
         }
     }
