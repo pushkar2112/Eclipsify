@@ -10,6 +10,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material.icons.filled.KeyboardArrowLeft
 import androidx.compose.material.icons.filled.KeyboardArrowRight
 import androidx.compose.material3.Button
@@ -39,15 +41,16 @@ import io.github.sceneview.ar.node.ArNode
 import io.github.sceneview.ar.node.PlacementMode
 
 @Composable
-fun Menu(modifier: Modifier, onClick:(String)->Unit) {
+fun Option(modifier: Modifier, onClick:(String)->Unit) {
     var currentIndex by remember {
         mutableStateOf(0)
     }
 
     val itemsList = listOf(
-        Food("abg",R.drawable.solar)
-
-        )
+        Model("abg",R.drawable.solar),
+        Model("earth",R.drawable.ecl2)
+        ,Model("abg",R.drawable.solar),
+    )
     fun updateIndex(offset:Int){
         currentIndex = (currentIndex+offset + itemsList.size) % itemsList.size
         onClick(itemsList[currentIndex].name)
@@ -56,8 +59,21 @@ fun Menu(modifier: Modifier, onClick:(String)->Unit) {
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceAround
     ) {
-        {
-        }}}
+
+        IconButton(onClick = {
+            updateIndex(-1)
+        }) {
+            Icon(imageVector = Icons.Filled.ArrowBack, contentDescription ="previous", tint = Color.White )
+        }
+
+        CircularImage(imageId = itemsList[currentIndex].imageId )
+
+        IconButton(onClick = {
+            updateIndex(1)
+        }) {
+            Icon(imageVector = Icons.Filled.ArrowForward, contentDescription ="next", tint = Color.White)
+        }
+    }}
 
 
 
@@ -98,7 +114,7 @@ fun ARScreen(model:String) {
                     loadModelGlbAsync(
                         glbFileLocation = "models/${model}.glb",
 
-                        scaleToUnits = 2f
+                        scaleToUnits = 1f
                     ){
 
                     }
@@ -119,7 +135,7 @@ fun ARScreen(model:String) {
         if(placeModelButton.value){
             Button(onClick = {
                 modelNode.value?.anchor()
-            }, modifier = Modifier.align(Alignment.BottomCenter).padding(bottom = 20.dp).size(190.dp,60.dp)) {
+            }, modifier = Modifier.align(Alignment.BottomCenter).padding(bottom = 150.dp).size(190.dp,60.dp)) {
                 Text(text = "Place It", fontSize = 18.sp)
             }
         }
@@ -129,7 +145,7 @@ fun ARScreen(model:String) {
     LaunchedEffect(key1 = model){
         modelNode.value?.loadModelGlbAsync(
             glbFileLocation = "models/${model}.glb",
-            scaleToUnits = 2f
+            scaleToUnits = 1f
         )
         Log.e("errorloading","ERROR LOADING MODEL")
     }
@@ -137,16 +153,16 @@ fun ARScreen(model:String) {
 }
 
 
-data class Food(var name:String,var imageId:Int)
+data class Model(var name:String,var imageId:Int)
 
 @Composable
 fun ArImplementt(navController: NavHostController) {
     Box(modifier = Modifier.fillMaxSize()){
         val currentModel = remember {
-            mutableStateOf("abg")
+            mutableStateOf("earth")
         }
         ARScreen(currentModel.value,  )
-        Menu(modifier = Modifier.align(Alignment.BottomCenter)){
+        Option(modifier = Modifier.align(Alignment.BottomCenter)){
             currentModel.value = it
         }
 
