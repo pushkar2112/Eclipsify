@@ -33,7 +33,7 @@ import com.example.eclipsify.R
 
 
 @Composable
-fun ChangesScreen(navController: NavHostController) {
+fun SolarChangesScreen(navController: NavHostController) {
     Box(modifier = Modifier
         .fillMaxSize()
         .background(Color.Black))
