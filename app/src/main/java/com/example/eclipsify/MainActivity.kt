@@ -43,6 +43,7 @@ import com.example.eclipsify.mainScreens.Adult.upcomingEclipse
 import com.example.eclipsify.mainScreens.Adult.whatEclipse
 import com.example.eclipsify.mainScreens.child.whatEclipseKid
 import com.example.eclipsify.mainScreens.Adult.AdultPage
+import com.example.eclipsify.mainScreens.Adult.SolarChangesScreen
 import com.example.eclipsify.mainScreens.jupiterEclipse
 import com.example.eclipsify.mainScreens.marsEclipse
 import com.example.eclipsify.onBoarding.Boarding
@@ -173,6 +174,9 @@ composable("KidSolar"){
         }
         composable("CommunitySection"){
             CommunityScreen(navController = navController)
+        }
+        composable("SolarChanges"){
+            SolarChangesScreen(navController)
         }
         
 

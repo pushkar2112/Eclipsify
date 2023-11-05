@@ -516,7 +516,7 @@ fun AdultPage(navController: NavHostController) {
                             Column(
                                 Modifier
                                     .fillMaxSize()
-                                    .clickable { navController.navigate("Jupiter") },
+                                    .clickable { navController.navigate("SolarChanges") },
                                 verticalArrangement = Arrangement.Center,
                                 horizontalAlignment = androidx.compose.ui.Alignment.CenterHorizontally
                             ) {
