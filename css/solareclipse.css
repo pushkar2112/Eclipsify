@@ -1,5 +1,5 @@
 .impo1{
-    background-color: #0d0618;
+    background-color: #000000;
     height: 100vh;
     width: 100vw;
 }
@@ -33,13 +33,13 @@
     text-transform: uppercase;
     transition: 0.5s;
     background-size: 200% auto;
-    color: white;
+    color: rgb(0, 0, 0);
     border-radius: 10px;
     display: block;
     border: 0px;
     font-weight: 700;
-    box-shadow: 0px 0px 14px -7px #f09819;
-    background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+    box-shadow: 0px 0px 14px -7px #fffee0;
+    background-image: linear-gradient(45deg, #fffee0 0%, #fdfa72 51%, #fffd8d  100%);
     cursor: pointer;
     user-select: none;
     -webkit-user-select: none;
@@ -49,8 +49,7 @@
   .button-87:hover {
     background-position: right center;
     /* change the direction of the change here */
-    color: #fff;
-    text-decoration: none;
+    color: #563131;
   }
   
   .button-87:active {
@@ -63,11 +62,9 @@
     padding-top: 30px;
   }
   .hello1{
-    list-style-type: none;
-    list-style: none;
+    text-decoration: none;
 
   }
   .hello1:hover{
-    list-style-type: none;
-    list-style: none;
+    text-decoration: none;
   }

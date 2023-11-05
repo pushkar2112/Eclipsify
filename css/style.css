@@ -8,7 +8,7 @@
 }
 :root {
     --primary: #933ded;
-    --dark: #0d0618;
+    --dark: #000000;
     --pure: #fff;
     --smoke: whitesmoke;
     --dark-gray: #999;
@@ -178,15 +178,15 @@ main section.header h4 {
 
 .button-59 {
     align-items: center;
-    background-color: #fff;
-    border: 2px solid #000;
+    background-color: #FFFEE0;
+    border-radius: 100px;
     box-sizing: border-box;
     color: #000;
     cursor: pointer;
     display: inline-flex;
     fill: #000;
     font-family: Inter,sans-serif;
-    font-size: 16px;
+    font-size: 2vh;
     font-weight: 600;
     height: 48px;
     justify-content: center;
@@ -195,6 +195,7 @@ main section.header h4 {
     min-width: 140px;
     outline: 0;
     padding: 0 17px;
+    margin-top: 20px;
     text-align: center;
     text-decoration: none;
     transition: all .3s;
@@ -208,13 +209,11 @@ main section.header h4 {
   }
   
   .button-59:hover {
-    border-color: #06f;
     color: #06f;
     fill: #06f;
   }
   
   .button-59:active {
-    border-color: #06f;
     color: #06f;
     fill: #06f;
   }
@@ -227,6 +226,7 @@ main section.header h4 {
   .section1h1{
     font-size: 10vh;
     font-weight: 100;
+    color: #FFFEE0;
     text-transform: capitalize;
     margin-bottom: 20px;
     font-family: 'Space Mono', monospace;
@@ -234,9 +234,9 @@ main section.header h4 {
   .section1h4{
     font-size: 18px;
     font-weight: 400;
-    color: var(--dark-gray);
     margin-bottom: 20px;
     z-index: 1;
+    color: #fff;
   }
   .responsive {
     width: 50%;
@@ -254,3 +254,11 @@ main section.header h4 {
       height: 20vh;
     }
   }  
+  #myVideo{
+    position: absolute;
+    right:0 ;
+    bottom: 0;
+    width: 100vw;
+    height:100vh ;
+    z-index: -1;
+  }
