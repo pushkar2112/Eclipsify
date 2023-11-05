@@ -5,6 +5,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -26,6 +27,8 @@ import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.ThumbUp
+import androidx.compose.material.icons.outlined.AddCircle
+import androidx.compose.material.icons.outlined.FavoriteBorder
 import androidx.compose.material.icons.outlined.ThumbUp
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -100,9 +103,14 @@ fun CommunityScreen() {
                         Text(text = "User", fontSize = 20.sp, fontFamily = FontFamily(Font(R.font.popreg)))
 
                     }
-                    Image(painter = painterResource(id = R.drawable.pic1), contentDescription ="", modifier = Modifier.fillMaxWidth().fillMaxSize(0.9f), contentScale = ContentScale.Crop )
-                    Row (Modifier.fillMaxWidth().padding(start=5.dp,top = 8.dp)){
-                        Icon(Icons.Outlined.ThumbUp, contentDescription ="",Modifier.
+                    Image(painter = painterResource(id = R.drawable.pic1), contentDescription ="", modifier = Modifier
+                        .fillMaxWidth()
+                        .fillMaxSize(0.9f), contentScale = ContentScale.Crop )
+                    Row (
+                        Modifier
+                            .fillMaxWidth()
+                            .padding(start = 5.dp, top = 8.dp)){
+                        Icon(Icons.Outlined.FavoriteBorder, contentDescription ="",Modifier.
                         fillMaxHeight() )
 
                     }
@@ -110,7 +118,35 @@ fun CommunityScreen() {
                 }
 
             }
+Spacer(modifier =Modifier.size(30.dp))
+            Card(modifier = Modifier
+                .fillMaxWidth()
+                .height(310.dp)
+                .padding(2.dp), colors = CardDefaults.cardColors(Color.LightGray)) {
+                Column(
+                    Modifier
+                        .padding(12.dp)
+                        .fillMaxSize()) {
+                    Row (Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically){
+                        Icon(Icons.Filled.AccountCircle, contentDescription ="",
+                            Modifier
+                                .padding(horizontal = 10.dp)
+                                .size(30.dp) )
+                        Text(text = "User 2", fontSize = 20.sp, fontFamily = FontFamily(Font(R.font.popreg)))
 
+                    }
+                    Image(painter = painterResource(id = R.drawable.annular), contentDescription ="", modifier = Modifier.fillMaxWidth().fillMaxSize(0.9f), contentScale = ContentScale.Crop )
+                    Row (Modifier.fillMaxWidth().padding(start=5.dp,top = 8.dp)){
+                        Icon(Icons.Outlined.FavoriteBorder, contentDescription ="",Modifier.
+                        fillMaxHeight() )
+
+
+
+                    }
+
+                }
+
+            }
 
 
 
