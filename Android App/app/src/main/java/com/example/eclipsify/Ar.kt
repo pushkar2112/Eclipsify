@@ -47,9 +47,11 @@ fun Option(modifier: Modifier, onClick:(String)->Unit) {
     }
 
     val itemsList = listOf(
-        Model("abg",R.drawable.solar),
-        Model("earth",R.drawable.ecl2)
-        ,Model("abg",R.drawable.solar),
+        Model("earth",R.drawable.solar),
+        Model("abg",R.drawable.ecl2),
+        Model("Moon",R.drawable.astroo),
+        Model("abg",R.drawable.ecl2),
+        Model("Moon",R.drawable.astroo)
     )
     fun updateIndex(offset:Int){
         currentIndex = (currentIndex+offset + itemsList.size) % itemsList.size
@@ -108,7 +110,7 @@ fun ARScreen(model:String) {
             nodes = nodes,
             planeRenderer = true,
             onCreate = {arSceneView ->
-                arSceneView.lightEstimationMode = Config.LightEstimationMode.DISABLED
+                arSceneView.lightEstimationMode = Config.LightEstimationMode.ENVIRONMENTAL_HDR
                 arSceneView.planeRenderer.isShadowReceiver = false
                 modelNode.value = ArModelNode(arSceneView.engine, PlacementMode.INSTANT).apply {
                     loadModelGlbAsync(
@@ -159,7 +161,7 @@ data class Model(var name:String,var imageId:Int)
 fun ArImplementt(navController: NavHostController) {
     Box(modifier = Modifier.fillMaxSize()){
         val currentModel = remember {
-            mutableStateOf("earth")
+            mutableStateOf("Moon")
         }
         ARScreen(currentModel.value,  )
         Option(modifier = Modifier.align(Alignment.BottomCenter)){
