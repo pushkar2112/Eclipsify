@@ -17,6 +17,7 @@ import com.example.eclipsify.Quiz.QuizApp
 import com.example.eclipsify.Quiz.QuizPage
 import com.example.eclipsify.Quiz.kidQuizApp
 import com.example.eclipsify.Quiz.quizMain
+import com.example.eclipsify.community.CommunityScreen
 import com.example.eclipsify.eclipseGame.comic
 import com.example.eclipsify.eclipseGame.eclipseGame
 import com.example.eclipsify.eclipseGame.eclipseGame2
@@ -170,6 +171,10 @@ composable("KidSolar"){
         composable("QuizKid"){
             quizMain(navController = navController)
         }
+        composable("CommunitySection"){
+            CommunityScreen(navController = navController)
+        }
+        
 
 
     }

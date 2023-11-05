@@ -165,7 +165,7 @@ fun AdultPage(navController: NavHostController) {
                         home()
                         quiz(navController)
                         safety(navController)
-                        videos()
+                        videos(navController)
 
 
                     }
