@@ -1,0 +1,73 @@
+.impo1{
+    background-color: #0d0618;
+    height: 100vh;
+    width: 100vw;
+}
+
+  .rounded{
+    margin-left: auto;
+    margin-right: auto;
+    display: block; 
+    padding-top: 20px;
+    width: 20%;
+    height: 20%;
+  }
+  .h1heading{
+    color: white;
+    font-size: 50px;
+    margin-top: 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: justify;
+  }
+  .h1heading4{
+    color:hotpink;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+  .buttons{
+    display: inline-flex;
+  }
+  .button-87 {
+    margin: 10px;
+    padding: 15px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    display: block;
+    border: 0px;
+    font-weight: 700;
+    box-shadow: 0px 0px 14px -7px #f09819;
+    background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-87:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .button-87:active {
+    transform: scale(0.95);
+  }
+  .buttons{
+    text-align: center;
+    align-items: center;
+    margin-left: 600px;
+    padding-top: 30px;
+  }
+  .hello1{
+    list-style-type: none;
+    list-style: none;
+
+  }
+  .hello1:hover{
+    list-style-type: none;
+    list-style: none;
+  }
