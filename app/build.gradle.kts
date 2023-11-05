@@ -53,7 +53,10 @@ android {
 
 dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.1")
-    implementation("com.aallam.openai:openai-client:0.4.0")
+    implementation ("com.aallam.openai:openai-client:3.5.0")
+    implementation ("androidx.compose.foundation:foundation:1.0.0")
+    implementation ("androidx.compose.material:material:1.0.0")
+
 
     implementation("com.google.code.gson:gson:2.10.1")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.0")
