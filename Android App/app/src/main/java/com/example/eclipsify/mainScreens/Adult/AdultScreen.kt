@@ -547,7 +547,7 @@ fun AdultPage(navController: NavHostController) {
                             Column(
                                 Modifier
                                     .fillMaxSize()
-                                    .clickable { navController.navigate("Mars") },
+                                    .clickable { navController.navigate("LunarChanges") },
                                 verticalArrangement = Arrangement.Center,
                                 horizontalAlignment = androidx.compose.ui.Alignment.CenterHorizontally
                             ) {

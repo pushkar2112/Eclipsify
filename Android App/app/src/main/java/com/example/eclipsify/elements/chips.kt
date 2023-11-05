@@ -82,7 +82,7 @@ fun videos(navController: NavHostController) {
     AssistChip(modifier = Modifier
         .padding(start = 7.dp, top = 32.dp)
         .size(70.dp, 25.dp),onClick = { navController.navigate("CommunitySection") },
-        label = { Text(text = "AR", modifier = Modifier.padding(start = 0.dp, bottom = 2.dp), color = Color.White, fontSize = 9.sp, fontFamily = FontFamily(
+        label = { Text(text = "Feed", modifier = Modifier.padding(start = 0.dp, bottom = 2.dp), color = Color.White, fontSize = 9.sp, fontFamily = FontFamily(
             Font(R.font.leextrabold)
         )) }, colors = AssistChipDefaults.assistChipColors(containerColor = Color.White.copy(0.1f)), border = null)
 

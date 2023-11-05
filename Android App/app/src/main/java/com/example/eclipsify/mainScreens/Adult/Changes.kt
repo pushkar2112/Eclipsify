@@ -90,7 +90,7 @@ Column(
         )
     }
 
-    Text(text= "Eclipses are natural celestial events.On Earth, there are two main types of eclipses: solar eclipses and lunar eclipses. Each type of eclipse brings about unique changes and effects on our planet. Here's how these changes occur:",
+    Text(text= "During solar eclipses, Earth experiences temporary darkness in the path of totality, a noticeable temperature drop due to reduced sunlight, potential changes in animal behavior, and the creation of unique lighting patterns and crescent-shaped shadows.",
         color = Color.White, fontSize = 15.sp, fontFamily = FontFamily(Font(R.font.popreg)),
         modifier = Modifier.padding(top = 18.dp, start = 21.dp,end=21.dp),
         textAlign = TextAlign.Justify)
@@ -104,16 +104,16 @@ Column(
 }
 
 val changeSolar= listOf(
-    Change("Darkening of the moon", "During a lunar eclipse, the moon passes into the Earth's shadow. It does not disappear but takes on a reddish hue as sunlight is refracted through the Earth's atmosphere onto its surface."),
-    Change("Visibility of earth's atmosphere", "The sunlight refracted onto the eclipsed moon allows viewing of the earth's atmosphere in action, sometimes making the moon appear to glow red, orange or deep coppery brown."),
-    Change("Changes in moonrise and moonset times", "The moon's orbit is elliptical, so rise and set times vary. Eclipses occur when orbital positions align just right with the sun and earth."),
-    Change("Physiological effects", "Some people report similar symptoms as a solar eclipse like nausea or dizziness due to changes in light levels and appearance of the sky, though less dramatically than a solar eclipse."),
-    Change("Effects on tides", "The moon's gravitational pull is responsible for ocean tides. During an eclipse when the moon passes through the earth's shadow, its gravitational influence is reduced slightly, resulting in smaller tidal ranges."),
-    Change("Shadow bands", "Similar to a solar eclipse, shadow bands can sometimes be seen radiating outwards from the moon as earth's shadow approaches or recedes during the eclipse."),
-    Change("Impact on nocturnal animals", "Some animals may become more active than usual as the moon darkens, mistaking it for nightfall. Others seem to take no notice of the change."),
-    Change("Cultural and spiritual significance", "Many ancient cultures attached mythological or spiritual meanings to lunar eclipses, seeing them as omens. Some modern cultures still hold special beliefs or traditions associated with eclipses."),
-    Change("Opportunity for astronomy", "A lunar eclipse provides a great chance to observe the moon through a telescope, sometimes seeing additional colors or details not visible at other times. It also allows viewing stars and planets near the moon."),
-    Change("Visual effects", "As the moon passes through different parts of the earth's shadow, its illumination changes from partial to near total darkness and back again, presenting a visually dramatic event in the night sky.")
+    Change("Darkening of the sky", "During a solar eclipse, the moon passes between the sun and earth, blocking the sun's light and darkening the sky. The sky takes on an eerie twilight appearance."),
+    Change("Visibility of solar corona", "As the moon blocks the sun's bright face, it allows viewing of the sun's much fainter outer atmosphere called the solar corona."),
+    Change("Reduction in temperature", "With less direct sunlight reaching the earth's surface, temperatures drop noticeably during the eclipse. Reports show drops as much as 3-5 degrees Celsius."),
+    Change("Changes in animal behavior", "Many animals seem disturbed and confused by the unusual darkening of the day. Birds may return to their nests, and nocturnal animals sometimes emerge earlier than usual."),
+    Change("Effects on plants", "Some plants are reported to close their leaves or flowers temporarily in response to the dimming of light levels during a solar eclipse."),
+    Change("Visual effects on the eclipsed sun", "As the moon covers different portions of the sun, the shape of the remaining sun appears to change, going from crescent to bite out of a cookie to thin crescent again."),
+    Change("Shadow bands effect", "Ripples of shadow may be seen sweeping across the landscape moments before and after totality as the moon's shadow approaches and recedes from an observer's location."),
+    Change("Coronal mass ejections", "Large eruptions of plasma and magnetic fields can be released from the sun's corona during an eclipse, potentially impacting Earth's magnetic field and satellite/power systems."),
+    Change("Physiological effects on people", "Some report nausea, dizziness or other symptoms as a response to the rapid dimming and changing light levels during an eclipse. Eye damage can occur if looking directly at the sun without proper eye protection."),
+    Change("Reddening of sunlight", "As sunlight passes through the Earth's atmosphere near the horizon during totality, air molecules scatter blue light while red wavelengths continue straight, giving the sun a red hue.")
 )
 data class Change(val head:String,val info:String)
 @Composable
@@ -122,7 +122,7 @@ fun ChangeCard(change: Change){
     Card(
         Modifier
 
-            .padding(end = 20.dp)
+            .padding(end = 20.dp, bottom = 40.dp)
             .offset(10.dp), shape = RoundedCornerShape(topStart = 18.dp, topEnd = 18.dp, bottomStart = 18.dp, bottomEnd = 18.dp),colors = CardDefaults.cardColors(colorResource(id = R.color.trans))) {
 
         Column(modifier = Modifier.fillMaxWidth(), verticalArrangement = Arrangement.Center) {
