@@ -60,15 +60,15 @@ import com.example.eclipsify.R
 fun CommunityScreen(navController: NavHostController) {
     Box(modifier = Modifier
         .fillMaxSize()
-        .background(Color.White) ){
-
+        .background(Color.Black) ){
+Image(painter = painterResource(id = R.drawable.bcgnewh), contentDescription ="",Modifier.fillMaxSize(), contentScale = ContentScale.Crop )
 
 
         Column(
             Modifier
                 .fillMaxSize()
                 .verticalScroll(state = rememberScrollState())) {
-            TopAppBar(backgroundColor = Color.White,
+            TopAppBar(backgroundColor = Color.White.copy(0.2f),
                 navigationIcon = {
                     IconButton(onClick = { /* do something */ }) {
                         Icon(
@@ -82,17 +82,18 @@ fun CommunityScreen(navController: NavHostController) {
                     Text(
                         text = "Feed",
                         modifier = Modifier.offset(80.dp),
-                        color = Color.Black,
+                        color = Color.White,
                         fontSize = 24.sp,
                         fontFamily = FontFamily(
                             Font(R.font.lemedium)
                         )
                     )
                 })
+            Spacer(modifier = Modifier.height(20.dp))
             Card(modifier = Modifier
                 .fillMaxWidth()
                 .height(310.dp)
-                .padding(2.dp), colors = CardDefaults.cardColors(Color.LightGray)) {
+                .padding(2.dp), colors = CardDefaults.cardColors(Color.Black.copy(0.6f))) {
                 Column(
                     Modifier
                         .padding(12.dp)
@@ -101,8 +102,8 @@ fun CommunityScreen(navController: NavHostController) {
                         Icon(Icons.Filled.AccountCircle, contentDescription ="",
                             Modifier
                                 .padding(horizontal = 10.dp)
-                                .size(30.dp) )
-                        Text(text = "User", fontSize = 20.sp, fontFamily = FontFamily(Font(R.font.popreg)))
+                                .size(30.dp), tint = Color.White )
+                        Text(text = "User", fontSize = 20.sp, fontFamily = FontFamily(Font(R.font.popreg)), color = Color.White)
 
                     }
                     Image(painter = painterResource(id = R.drawable.pic1), contentDescription ="", modifier = Modifier
@@ -112,19 +113,21 @@ fun CommunityScreen(navController: NavHostController) {
                         Modifier
                             .fillMaxWidth()
                             .padding(start = 5.dp, top = 8.dp)){
-                        Icon(Icons.Outlined.FavoriteBorder, contentDescription ="",Modifier.
-                        fillMaxHeight() )
+                        Icon(Icons.Outlined.FavoriteBorder, contentDescription ="",
+                            Modifier
+                                .fillMaxHeight()
+                                .clickable { }, tint = Color.White )
 
                     }
 
                 }
 
             }
-Spacer(modifier =Modifier.size(30.dp))
+            Spacer(modifier = Modifier.height(20.dp))
             Card(modifier = Modifier
                 .fillMaxWidth()
                 .height(310.dp)
-                .padding(2.dp), colors = CardDefaults.cardColors(Color.LightGray)) {
+                .padding(2.dp), colors = CardDefaults.cardColors(Color.Black.copy(0.6f))) {
                 Column(
                     Modifier
                         .padding(12.dp)
@@ -133,16 +136,21 @@ Spacer(modifier =Modifier.size(30.dp))
                         Icon(Icons.Filled.AccountCircle, contentDescription ="",
                             Modifier
                                 .padding(horizontal = 10.dp)
-                                .size(30.dp) )
-                        Text(text = "User 2", fontSize = 20.sp, fontFamily = FontFamily(Font(R.font.popreg)))
+                                .size(30.dp), tint = Color.White )
+                        Text(text = "User", fontSize = 20.sp, fontFamily = FontFamily(Font(R.font.popreg)), color = Color.White)
 
                     }
-                    Image(painter = painterResource(id = R.drawable.annular), contentDescription ="", modifier = Modifier.fillMaxWidth().fillMaxSize(0.9f), contentScale = ContentScale.Crop )
-                    Row (Modifier.fillMaxWidth().padding(start=5.dp,top = 8.dp)){
-                        Icon(Icons.Outlined.FavoriteBorder, contentDescription ="",Modifier.
-                        fillMaxHeight() )
-
-
+                    Image(painter = painterResource(id = R.drawable.annular), contentDescription ="", modifier = Modifier
+                        .fillMaxWidth()
+                        .fillMaxSize(0.9f), contentScale = ContentScale.Crop )
+                    Row (
+                        Modifier
+                            .fillMaxWidth()
+                            .padding(start = 5.dp, top = 8.dp)){
+                        Icon(Icons.Outlined.FavoriteBorder, contentDescription ="",
+                            Modifier
+                                .fillMaxHeight()
+                                .clickable { }, tint = Color.White )
 
                     }
 
