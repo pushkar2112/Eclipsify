@@ -492,6 +492,110 @@ fun AdultPage(navController: NavHostController) {
 
                     )
                     quickFactsScroll(quickFacts = quickFact)
+                    Row {
+                        Text(text = "Eclipse",
+                            color = Color.White,
+                            fontSize = 16.sp,
+                            fontFamily = FontFamily(Font(R.font.akirabold)),
+                            modifier = Modifier
+                                .padding(start = 15.dp, top = 31.dp)
+                                .clickable { })
+                        Text(text = "Effect",
+                            color = colorResource(id = R.color.orange),
+                            fontSize = 16.sp,
+                            fontFamily = FontFamily(Font(R.font.akirabold)),
+                            modifier = Modifier
+                                .padding(start = 1.dp, top = 31.dp)
+                                .clickable { })
+
+
+                        Divider(
+                            color = colorResource(id = R.color.orange),
+                            modifier = Modifier.padding(top = 46.dp, end = 18.dp)
+                        )
+
+                    }
+                    Spacer(modifier = Modifier.height(15.dp))
+                    Text(text = "Explore the world of eclipse beyond Earth. Eclipses are not unique to Earth; they occur on other planets and moons within our solar system as well. ", color = Color.White, modifier = Modifier.padding(start = 15.dp,end=15.dp))
+                    Row(modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(top = 8.dp), horizontalArrangement = Arrangement.SpaceEvenly) {
+
+                        Card(
+                            modifier = Modifier
+                                .size(170.dp, 183.dp)
+                                .padding(),
+                            colors = CardDefaults.cardColors(colorResource(id = R.color.trans))
+                        ) {
+                            Column(
+                                Modifier
+                                    .fillMaxSize()
+                                    .clickable { navController.navigate("Jupiter") },
+                                verticalArrangement = Arrangement.Center,
+                                horizontalAlignment = androidx.compose.ui.Alignment.CenterHorizontally
+                            ) {
+
+
+                                Image(
+                                    painter = painterResource(id = R.drawable.jupiter),
+                                    contentDescription = "",
+                                    modifier = Modifier.size(148.dp, 110.dp)
+                                )
+                                Text(
+                                    text = "Eclipse on ",
+                                    color = colorResource(id = R.color.white),
+                                    fontSize = 15.sp,
+                                    fontFamily = FontFamily(Font(R.font.akirabold)),
+
+                                    )
+                                Text(
+                                    text = "Jupiter",
+                                    color = colorResource(id = R.color.orange),
+                                    fontSize = 15.sp,
+                                    fontFamily = FontFamily(Font(R.font.akirabold)),
+
+                                    )
+                            }
+
+                        }
+                        Card(
+                            modifier = Modifier
+                                .size(170.dp, 183.dp)
+                                .padding(),
+                            colors = CardDefaults.cardColors(colorResource(id = R.color.trans))
+                        ) {
+                            Column(
+                                Modifier
+                                    .fillMaxSize()
+                                    .clickable { navController.navigate("Mars") },
+                                verticalArrangement = Arrangement.Center,
+                                horizontalAlignment = androidx.compose.ui.Alignment.CenterHorizontally
+                            ) {
+
+
+                                Image(
+                                    painter = painterResource(id = R.drawable.mars),
+                                    contentDescription = "",
+                                    modifier = Modifier.size(148.dp, 110.dp)
+                                )
+                                Text(
+                                    text = "Eclipse on ",
+                                    color = colorResource(id = R.color.white),
+                                    fontSize = 15.sp,
+                                    fontFamily = FontFamily(Font(R.font.akirabold)),
+
+                                    )
+                                Text(
+                                    text = "Mars",
+                                    color = colorResource(id = R.color.orange),
+                                    fontSize = 15.sp,
+                                    fontFamily = FontFamily(Font(R.font.akirabold)),
+
+                                    )
+                            }
+
+                        }
+                    }
 Column(Modifier.clickable { navController.navigate("SafetyPrecautions") }) {
 
 

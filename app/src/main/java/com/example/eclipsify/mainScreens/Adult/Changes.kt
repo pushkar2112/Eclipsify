@@ -25,13 +25,15 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 import com.example.eclipsify.R
 
-@Preview
+
 @Composable
-fun ChangesScreen() {
+fun ChangesScreen(navController: NavHostController) {
     Box(modifier = Modifier
         .fillMaxSize()
         .background(Color.Black))
@@ -77,26 +79,11 @@ Column(
         color = Color.White, fontSize = 15.sp, fontFamily = FontFamily(Font(R.font.popreg)),
         modifier = Modifier.padding(top = 18.dp, start = 21.dp,end=21.dp),
         textAlign = TextAlign.Justify)
-    Row {
-        Text(text = "Solar",
-            color = colorResource(id = R.color.white),
-            fontSize = 22.sp,
-            fontFamily = FontFamily(Font(R.font.akirabold)),
-            modifier = Modifier
-                .padding(start = 21.dp, top = 31.dp)
-        )
-        Text(text = "Eclipse",
-            color = colorResource(id = R.color.orange),
-            fontSize = 22.sp,
-            fontFamily = FontFamily(Font(R.font.akirabold)),
-            modifier = Modifier
-                .padding(top = 31.dp)
-                .offset(9.dp)
-        )
 
-
-    }
+    typesCarousel(navController)
 }
     }
 
 }
+
+
